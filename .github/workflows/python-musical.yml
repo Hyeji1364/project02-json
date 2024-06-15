@@ -41,7 +41,7 @@ jobs:
 
       - name: run file
         run: |
-          python M_add.py
+          python Melonadd.py
 
       - name: commits
         run: |
