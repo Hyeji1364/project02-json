@@ -9,7 +9,7 @@ on:
   pull_request:
     branches: ["main"]
   schedule:
-    - cron: '0 2 * * *'
+    - cron: "0 2 * * *"
 
 jobs:
   build:
@@ -20,16 +20,16 @@ jobs:
         python-version: ["3.9", "3.10", "3.11"]
 
     steps:
-      - uses: actions/checkout@v4  # Updated to the latest version
+      - uses: actions/checkout@v4 # Updated to the latest version
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4  # Updated to the latest version
+        uses: actions/setup-python@v4 # Updated to the latest version
         with:
           python-version: ${{ matrix.python-version }}
-        
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-        
+
       - name: Install library
         run: |
           pip install requests
@@ -38,16 +38,16 @@ jobs:
           pip install pandas
           pip install selenium
           pip install webdriver_manager
-      
+
       - name: run file
         run: |
-          python pychart_M_data.py
+          python M_add.py
 
       - name: commits
         run: |
-          git config --global user.email "dlswl1993@gmail.com"
-          git config --global user.name "HwangInJi"         
-          git add MusicalData/pychart_M_data_*.json
+          git config --global user.email "hyeji1364@gmail.com"
+          git config --global user.name "Hyeji1364"         
+          git add Melon_add/M_data_*.json
           git commit -m "차트 수집 완료"
 
       - name: push
