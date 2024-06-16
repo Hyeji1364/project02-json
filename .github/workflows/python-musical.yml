@@ -41,7 +41,7 @@ jobs:
 
       - name: run file
         run: |
-          python melonadd.py
+          python pychart_M_add.py
 
       - name: commits
         run: |
