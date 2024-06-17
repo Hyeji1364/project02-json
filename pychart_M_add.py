@@ -13,7 +13,7 @@ import json
 # 현재 날짜 가져오기
 current_date = datetime.now().strftime("%Y-%m-%d")
 today_date = datetime.now().date()
-filename = f"Melonadd/pychart_M_add_{current_date}.json"
+filename = f"Melonadd/pychart_M_add{current_date}.json"
 
 # 웹 드라이버 설정
 options = ChromeOptions()
@@ -176,7 +176,6 @@ for musical in music_data:
 # 데이터를 JSON 파일로 저장
 with open(filename, 'w', encoding='utf-8') as f:
     json.dump(music_data, f, ensure_ascii=False, indent=4)
-
 
 # 브라우저 종료
 browser.quit()
