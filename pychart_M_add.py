@@ -13,7 +13,7 @@ import json
 # 현재 날짜 가져오기
 current_date = datetime.now().strftime("%Y-%m-%d")
 today_date = datetime.now().date()
-filename = f"Melon_add/M_add_{current_date}.json"
+filename = f"Melonadd/pychart_M_add_{current_date}.json"
 
 # 웹 드라이버 설정
 options = ChromeOptions()
