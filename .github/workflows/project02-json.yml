@@ -30,6 +30,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4 lxml pandas selenium webdriver_manager
 
+      - name: Verify file existence
+        run: |
+          ls -al
+          ls -al Melonadd
+
       - name: Run Python script
         run: |
           python Melonadd/pychart_M_add.py
